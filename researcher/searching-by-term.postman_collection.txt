@@ -1,0 +1,55 @@
+{
+	"id": "56caab76-564e-afe7-5774-bc1ec36df1de",
+	"name": "Searching By Term",
+	"description": "",
+	"order": [
+		"e2b2ed68-5497-0828-1c98-dc5de0852396",
+		"98740a22-5ce7-baa0-c5fe-f7d6e4fb0aa9"
+	],
+	"folders": [],
+	"timestamp": 1467986294163,
+	"owner": "",
+	"remoteLink": "",
+	"public": false,
+	"published": false,
+	"requests": [
+		{
+			"id": "98740a22-5ce7-baa0-c5fe-f7d6e4fb0aa9",
+			"headers": "",
+			"url": "https://uts-ws.nlm.nih.gov/rest/search/current?string=idiopathic neuropathy&sabs=SNOMEDCT_US&returnIdType=sourceUi&ticket={service-ticket}",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1467986416957,
+			"name": "Retrieve SNOMED CT concepts based on a term search",
+			"description": "Retrieves the CUI for 'idiopathic neuropathy' based on exact matching.",
+			"collectionId": "56caab76-564e-afe7-5774-bc1ec36df1de",
+			"responses": []
+		},
+		{
+			"id": "e2b2ed68-5497-0828-1c98-dc5de0852396",
+			"headers": "",
+			"url": "https://uts-ws.nlm.nih.gov/rest/search/current?string=diabetic foot&searchType=exact&ticket={service-ticket}",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1467986307178,
+			"name": "Retrieve CUIs based on an exact term match.",
+			"description": "Retrieves the CUI for 'diabetic foot' based on exact matching.",
+			"collectionId": "56caab76-564e-afe7-5774-bc1ec36df1de",
+			"responses": []
+		}
+	]
+}

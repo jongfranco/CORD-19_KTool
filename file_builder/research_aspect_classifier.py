@@ -17,7 +17,7 @@ class ResearchAspectClassifier:
         self.tokenizer = AutoTokenizer.from_pretrained('allenai/scibert_scivocab_uncased')
 
         #Load model from path
-        self.model.load_state_dict(torch.load("file_builder/scibert_best_model.pt", map_location=torch.device('cpu')))
+        self.model.load_state_dict(torch.load("scibert_best_model.pt", map_location=torch.device('cpu')), strict=False)
         
         self.model.eval()
         print('== Done Loading ResearchAspectClassifier ==')

@@ -1,2 +1,4 @@
 built_files
 .ipynb_checkpoints
+file_builder/scibert_best_model.pt
+file_builder/metadata.csv
