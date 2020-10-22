@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "05e20ca9-08f0-4a14-a8c5-e399958454ca",
+		"name": "UTS Authentication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Request a ticket granting ticket with your API Key",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "apikey",
+							"value": "{api-key}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://utslogin.nlm.nih.gov/cas/v1/api-key",
+					"protocol": "https",
+					"host": [
+						"utslogin",
+						"nlm",
+						"nih",
+						"gov"
+					],
+					"path": [
+						"cas",
+						"v1",
+						"api-key"
+					]
+				},
+				"description": "Use the API key in your UTS Profile in the body of your post request in this example to obtain a ticket granting ticket."
+			},
+			"response": []
+		},
+		{
+			"name": "Request a Single-use service ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "service",
+							"value": "http://umlsks.nlm.nih.gov",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://utslogin.nlm.nih.gov/cas/v1/api-key/{TGT}",
+					"protocol": "https",
+					"host": [
+						"utslogin",
+						"nlm",
+						"nih",
+						"gov"
+					],
+					"path": [
+						"cas",
+						"v1",
+						"api-key",
+						"{TGT}"
+					]
+				},
+				"description": "Substitute the {TGT} portion of the URL with your ticket granting ticket.  Make the POST call and you'll receive a service ticket that you can use one time to make a request to the API.  Re-run this call each time you need a new service ticket."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
