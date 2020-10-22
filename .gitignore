@@ -2,3 +2,10 @@ built_files
 .ipynb_checkpoints
 file_builder/scibert_best_model.pt
 file_builder/metadata.csv
+file_builder/background.zip
+file_builder/purpose.zip
+file_builder/method.zip
+file_builder/findings.zip
+file_builder/whole.zip
+file_builder/built_files_cord19ktool.zip
+imagens
